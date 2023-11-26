@@ -1,0 +1,23 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+send_invitation:
+  path: /send-invitation
+  controller: App\Controller\InvitationController::sendInvitation
+  methods: [POST]
+
+cancel_invitation:
+  path: '/cancel-invitation/{id}'
+  controller: 'App\Controller\InvitationController::cancelInvitation'
+  methods: ['POST']
+
+accept_invitation:
+  path: '/accept-invitation/{id}'
+  controller: 'App\Controller\InvitationController::acceptInvitation'
+  methods: ['POST']
+
+decline_invitation:
+  path: '/decline-invitation/{id}'
+  controller: 'App\Controller\InvitationController::declineInvitation'
+  methods: ['POST']

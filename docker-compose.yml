@@ -18,29 +18,8 @@ services:
       - db
     ports:
       - "9000:9000"
-    environment:
-      APPLICATION_ENV: development
-      ENABLE_XDEBUG: 1
-      PHP_XDEBUG: 1
-      PHP_XDEBUG_DEFAULT_ENABLE: 1
-      PHP_XDEBUG_REMOTE_CONNECT_BACK: 0
-      PHP_XDEBUG_REMOTE_PORT: 9999
-      PHP_XDEBUG_REMOTE_HOST: 172.17.0.1
-      PHP_XDEBUG_IDEKEY: PHPSTORM
-      PHP_XDEBUG_REMOTE_LOG: /tmp/xdebug.log
-      XDEBUG_CONFIG: "remote_host=YOUR_HOST"
-      PHP_IDE_CONFIG: "serverName=MyProject"
-      APP_DEBUG: 1
-      APP_ENV: "dev"
     volumes:
       - ./project:/var/www/html
-
-  mailhog:
-    image: mailhog/mailhog
-    restart: always
-    ports:
-      - 1025:1025
-      - 8025:8025
 
   nginx:
     image: nginx:latest
