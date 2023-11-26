@@ -1,5 +1,18 @@
   <h1>Invitation API Documentation</h1>
 
+ <h2>Setup project</h2>
+
+<ul>
+  <li>git clone https://github.com/hels-wrk/invitation-rest-api-test-project.git</li>
+  <li>cd invitation-rest-api-test-project</li>
+  <li>docker-compose build</li>
+  <li>docker-compose up -d</li>
+  <li>docker-compose exec php composer install</li>
+  <li>docker-compose exec php bin/console doctrine:migrations:migrate</li>
+  <li>docker-compose exec php ./vendor/bin/phpunit</li>
+</ul>
+
+
   <h2>Sending an Invitation</h2>
 
   <p><strong>Endpoint:</strong></p>
